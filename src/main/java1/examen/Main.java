@@ -90,7 +90,9 @@ public class Main {
 			case"2":
 				System.out.println("Ingrese el codigo de la Poliza:");
 				codigo = in.nextLine();
+				break;
 				
+			case"3":
 				
 				
 				
