@@ -2,11 +2,9 @@ package examen;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import proyecto.fiinal.Libro;
-
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args, Poliza[][] new Poliza) {
 		
 		// TODO Auto-generated method stub
 
@@ -66,12 +64,39 @@ public class Main {
 				System.out.println("Ingrese el beneficio: ");
 				String beneficio = in.nextLine();
 				
-				Poliza poliza1 = new Poliza();
+				PolizaGeneral poliza1 = new PolizaGeneral();
 				poliza1.setCodigo(codigo);
 				poliza1.setDescripcion(descripcion);
 				poliza1.setNombre(nombre);
-				poliza1.setValorPoliza(valorpol);
+				poliza1.setValorPoliza(aniovig);
 				poliza1.setVigencia(valorpol);
+				poliza1.setCodigoDescuento(codigoDescuento);
+				poliza1.setnumeroSeguro(numeroSeguro);
+				
+				PolizaVip poliza2 = new PolizaVip();
+				poliza2.setNombre(nombre);
+				poliza2.setDescripcion(descripcion);
+				poliza2.setVigencia(aniovig);
+				poliza2.setValorPoliza(valorpol);
+				poliza2.setCodigo(codigo);
+				poliza2.setBeneficio(beneficio);
+				
+				Poliza listaPoliza[] = new Poliza[2];
+				listaPoliza[1] = poliza1;
+				listaPoliza[2] = poliza1;
+				break;
+				
+				
+			case"2":
+				System.out.println("Ingrese el codigo de la Poliza:");
+				codigo = in.nextLine();
+				
+				
+				
+				
+				
+				
+				
 				
 				
 				
@@ -81,14 +106,7 @@ public class Main {
 			
 	}while(!opcion.equals("5"));
 	}
-}
 
 
-///Libro libro1 =  new Libro();
-//libro1.setCodigo (codigo);
-//libro1.setNombre (nombre);
-//libro1.setAutor (autor);
-//libro1.setAnio(anio);
-//libro1.setEditorial(editorial);
-//libro1.setCantidadPaginas(canPag);
-//libro1.setPrecio(precio);
+
+
